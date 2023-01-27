@@ -35,7 +35,6 @@ xhr.onreadystatechange = function () {
   }};
 
 let data = {
-
   "kimlikNo": kimlikNo,
   "adSoyadi": adSoyad
  /* "email": email,*/
@@ -44,7 +43,6 @@ let data = {
   "sifre": sifre,
   "cinsiyetErkek":erkek,
   "cinsiyetKadin":kadin*/
-  
 };
 
 xhr.send(data);
