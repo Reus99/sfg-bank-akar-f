@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+	<link rel="stylesheet" type="text/css" href="login.css">
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		<form action="#">
+			<h1>Hesap Oluştur</h1>
+			<input type="number" placeholder="TC Kimlik No" class="tc_kimlik_no"/>
+			<input type="text" placeholder="Ad Soyad"class="adSoyad"/>
+			<input type="email" placeholder="Email" class="email" />
+			<input type="number" placeholder="Telefon No" class="telNo" />
+			<input type="text" placeholder="Adres" class="adres"/>
+			<input type="password" placeholder="Şifre" class="sifre"/>
+			<h4>Cinsiyet</h4>
+			<div class="gender">
+			<input type="radio" name="gender" value="erkek" class="erkek"> Erkek
+            <input type="radio" name="gender" value="kadin" class="kadin"> Kadın
+			</div>
+			<button class="hesapOlustur">Hesap Oluştur</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+		<form action="#">
+			<h1>Giriş Yap</h1>
+			<input type="number" placeholder="TC Kimlik No" />
+			<input type="password" placeholder="Şifre" />
+			<a href="#">Şifremi Unuttum</a>
+			<button id="giris"><a href="smsregister.html" id="girisbuton">Giriş Yap</a></button>
+		</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Hoşgeldiniz</h1>
+				<p>Bankamıza kayıtlı bir hesabınız var ise giriş yapınız</p>
+				<button class="ghost" id="signIn">Giriş Yap</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Merhaba</h1>
+				<p>Bankamıza kayıtlı bir hesabınız yok ise Üye olunuz</p>
+				<button class="ghost" id="signUp">Üye ol</button>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="section-center">
+	<h1 class="mb-0">AKAR BANK</h1>
+</div>
+	<script src="login.js"></script>
+</body>
+</html>
