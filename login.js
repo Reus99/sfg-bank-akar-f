@@ -35,9 +35,9 @@ xhr.onreadystatechange = function () {
 
 let data = {
   "kimlikNo": kimlikNo,
-  "adSoyad": adSoyad,
+  "adSoyadi": adSoyad,
   "email": email,
-  "telNo": telNo,
+  "telefonNo": telNo,
   "adres": adres,
   "sifre": sifre,
   "cinsiyetErkek":erkek,
