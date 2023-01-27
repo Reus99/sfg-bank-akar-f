@@ -30,19 +30,18 @@ xhr.setRequestHeader("Content-Type", "application/json");
 xhr.onreadystatechange = function () {
   if (xhr.readyState === 4) {
     console.log(xhr.status);
-    //deneme  asd asd a
     console.log(xhr.responseText);
   }};
 
 let data = {
   "kimlikNo": kimlikNo,
-  "adSoyadi": adSoyad
- /* "email": email,*/
-  /*"telefonNo": telNo,
+  "adSoyadi": adSoyad,
+  "email": email,
+  "telefonNo": telNo,
   "adres": adres,
   "sifre": sifre,
   "cinsiyetErkek":erkek,
-  "cinsiyetKadin":kadin*/
+  "cinsiyetKadin":kadin
 };
 
 xhr.send(data);
