@@ -17,17 +17,17 @@ const telNo= document.getElementById("telNo");
 const adres = document.getElementById("adres");
 const sifre = document.getElementById("sifre");
 const erkek = document.getElementById("erkek");
-const kadin = document.getElementById("kadin");
-const hesapOlustur = document.getElementById("hesapOlustur");
+const kadin = document.getElementById('kadin');
+const hesapOlustur = document.getElementById('hesapOlustur');
 
-hesapOlustur.addEventListener("click",xhr.onreadystatechange);
-
+hesapOlustur.addEventListener("click",function(){  
 let xhr = new XMLHttpRequest();
-xhr.open("POST", "https://reqbin.com/echo/post/json%22");
+xhr.open("POST", "localhost:9999/kimlik");
 xhr.setRequestHeader("Accept", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
 
-xhr.onreadystatechange = function () {
+xhr.onreadystatechange = function (e) {
+  e.preventDefault
   if (xhr.readyState === 4) {
     console.log(xhr.status);
     //deneme  asd asd a
@@ -35,15 +35,15 @@ xhr.onreadystatechange = function () {
   }};
 
 let data = {
-  "kimlikNo": kimlikNo,
-  "adSoyadi": adSoyad,
-  "email": email,
-  "telefonNo": telNo,
-  "adres": adres,
-  "sifre": sifre,
-  "cinsiyetErkek":erkek,
-  "cinsiyetKadin":kadin
+  "kimlikNo": kimlikNo.value,
+  "adSoyadi": adSoyad.value,
+  "email": email.value,
+  "telefonNo": telNo.value,
+  "adres": adres.value,
+  "sifre": sifre.value,
+  "cinsiyetErkek":erkek.value,
+  "cinsiyetKadin":kadin.value
 };
 
 xhr.send(data);
-
+});
