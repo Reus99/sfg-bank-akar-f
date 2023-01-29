@@ -19,12 +19,14 @@ const sifre = document.getElementById("sifre");
 const erkek = document.getElementById("erkek");
 const kadin = document.getElementById('kadin');
 const hesapOlustur = document.getElementById('hesapOlustur');
+let cinsiyet= null ;
 
 hesapOlustur.addEventListener("click",function(){  
 let xhr = new XMLHttpRequest();
 xhr.open("POST", "localhost:9999/kimlik");
 xhr.setRequestHeader("Accept", "application/json");
 xhr.setRequestHeader("Content-Type", "application/json");
+
 
 xhr.onreadystatechange = function (e) {
   e.preventDefault
@@ -40,9 +42,17 @@ let data = {
   "telefonNo": telNo.value,
   "adres": adres.value,
   "sifre": sifre.value,
-  "cinsiyetErkek":erkek.value,
-  "cinsiyetKadin":kadin.value
+  "cinsiyet":getcinsiyet()
 };
 
 xhr.send(data);
 });
+
+function getcinsiyet (){
+  if(erkek.checked){
+    cinsiyet= 1
+  }else if(kadin.checked){
+    cinsiyet=2
+  }
+  return cinsiyet
+};
