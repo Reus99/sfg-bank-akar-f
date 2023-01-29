@@ -40,13 +40,25 @@ xhr.onreadystatechange = function (e) {
 xhr.send(data);*/
 
   let data = {
-    kimlikNo: kimlikNo.value,
-    adSoyadi: adSoyad.value,
-    email: email.value,
-    telefonNo: telNo.value,
-    adres: adres.value,
-    sifre: sifre.value,
-    cinsiyet: getcinsiyet(),
+    "kimlikNo": kimlikNo.value,
+    "adiSoyadi": adSoyad.value,
+    "cinsiyet": getcinsiyet(),
+    "adresSet": [
+      {
+      "beyanAdres": adres.value,
+      "email":email.value
+    }
+  ],
+  "iletisimSet":[
+    {
+      "telefonNo":telNo.value
+  }
+],
+  "kullaniciGirisSet":[
+    {
+        "sifre":sifre.value
+    }
+  ],
   };
 
   var myHeaders = new Headers();
@@ -61,7 +73,7 @@ xhr.send(data);*/
     redirect: "follow",
   };
 
-  fetch("http://localhost:9999/giris/kullaniciEkle", requestOptions)
+  fetch("http://localhost:9999/giris/kimlik", requestOptions)
     .then((response) => response.text())
     .then((result) => console.log(result))
     .catch((error) => console.log("error", error));
