@@ -7,6 +7,7 @@
     <title>Document</title>
 	<link rel="stylesheet" type="text/css" href="login.css">
 <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
 <div class="container" id="container">
@@ -27,13 +28,13 @@
 			<button class="hesapOlustur" id="hesapOlustur">Hesap Oluştur</button>
 		</form>
 	</div>
-	<div class="form-container sign-in-container">
+	<div class="form-container sign-in-container" id="girisEkran">
 		<form action="#">
 			<h1>Giriş Yap</h1>
-			<input type="number" placeholder="TC Kimlik No" />
-			<input type="password" placeholder="Şifre" />
+			<input type="number" placeholder="TC Kimlik No" id="girisTc" />
+			<input type="password" placeholder="Şifre" id="girisSifre" />
 			<a href="#">Şifremi Unuttum</a>
-			<button id="giris"><a href="smsregister.html" id="girisbuton">Giriş Yap</a></button>
+			<button id="giris">Giriş Yap</a></button>
 		</form>
 	</div>
 	<div class="overlay-container">
