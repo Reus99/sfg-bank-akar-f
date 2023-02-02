@@ -1,20 +1,3 @@
-// document.getElementById("giris").addEventListener("click",request);
-// function request (e){
-//     e.preventDefault()
-//     const xhr = new XMLHttpRequest();
-//     xhr.open('POST','infomation.json'); 
-//     xhr.onload = function(){
-//         if(this.status===200){
-//             console.log(JSON.parse(this.responseText))
-//         }
-//         else{
-//             console.log('BASARISIZ')
-//         }
-//     }
-
-//     xhr.send();
-// }
-
 const FULL_DASH_ARRAY = 283;
 const WARNING_THRESHOLD = 53;
 const ALERT_THRESHOLD = 10;
@@ -128,3 +111,5 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+mailRegister.document.getElementById("email").value;
+
