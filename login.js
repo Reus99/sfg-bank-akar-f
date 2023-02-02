@@ -78,22 +78,22 @@ xhr.send(data);*/
     redirect: "follow",
   };
 
-  fetch("http://localhost:9999/giris/kimlik", requestOptions)
-    .then((response) => response.text())
-    .then( result => {
-      var jsonData= JSON.parse(result);
-      var adiSoyadi = jsonData.adiSoyadi;
-        if(jsonData.ekleControl){
-          console.log("Kayıt Başarılı");
-          Swal.fire({
-            icon: 'success',
-            title: 'BANKAMIZA HOŞ GELDİNİZ'+" "+adSoyad.value,
-            showConfirmButton: false,
-            timer: 2000
-          })
-        };
-    } )
-    .catch((error) => console.log("error", error));
+  fetch("http://localhost:9999/BANKSISTEM/login/auth", requestOptions)
+  .then((response) => response.text())
+  .then( result => {
+    var jsonData= JSON.parse(result);
+      if(jsonData){
+        console.log("Giriş Başarılı");
+        Swal.fire({
+          icon: 'success',
+          title: 'BANKAMIZA TEKRAR HOŞ GELDİNİZ'+" "+adSoyad.value,
+          showConfirmButton: false,
+          timer: 2000
+        })
+       window.location.href = "smsregister.html"   
+      };
+  } )
+  .catch((error) => console.log("error", error));
 });
 
 function getcinsiyet() {
